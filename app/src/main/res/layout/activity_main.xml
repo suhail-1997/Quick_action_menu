@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/eightdp"
+            android:fontFamily="@font/voltaire"
+            android:text="Menu"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textPrimary"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/sixtyfourdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menurecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="120dp"
+            android:paddingTop="0dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="160dp"
+            android:layout_height="240dp"
+            android:id="@+id/subsheet"
+            app:layout_behavior="com.google.android.material.transformation.FabTransformationSheetBehavior"
+            android:layout_above="@id/menuFab"
+            android:layout_marginEnd="@dimen/twentyfourdp"
+            android:layout_marginBottom="@dimen/eightdp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/category_background"
+            android:elevation="2dp"
+            android:padding="@dimen/eightdp"
+            android:visibility="visible">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quickemenu"
+                android:overScrollMode="never"/>
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:fabCustomSize="@dimen/sixtyfourdp"
+            android:src="@drawable/restaurant"
+            android:padding="@dimen/eightdp"
+            android:id="@+id/menuFab"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

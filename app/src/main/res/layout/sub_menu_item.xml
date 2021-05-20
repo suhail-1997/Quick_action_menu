@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="@dimen/eightdp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="@dimen/eightdp"
+        android:src="@drawable/veg"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/menutype"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:layout_marginStart="@dimen/eightdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuname"
+            android:text="Biryani"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/sixteensp"
+            android:fontFamily="@font/voltaire"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 500"
+            android:inputType="number"
+            android:id="@+id/price"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/twentyfoursp"
+            android:fontFamily="@font/voltaire"
+            android:layout_marginTop="@dimen/eightdp"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "Quick action menu"
+include ':app'
